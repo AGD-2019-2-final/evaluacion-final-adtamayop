@@ -1,4 +1,5 @@
 #! python3
+# coding=utf-8
 r"""Test cases
 >>> run_answer()
 Hola mundo!
@@ -15,7 +16,10 @@ def run_answer():
     answer = open('question.py', 'rt', encoding='utf-8').readlines()
     answer = [row for row in  answer if len(row) >= 2 and row[0:2] != '##']
     answer = '\n'.join(answer)
+    # print("david")
     return exec(answer)
+    # print(answer)
+    # return a
 
 #--------------------------------------------------------------------------------------------------
 # Grader (generic)
