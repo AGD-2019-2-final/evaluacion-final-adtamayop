@@ -1,6 +1,6 @@
-_grade: 0.78
+_grade: 1.72
 _score: 100
-date: '2020-02-07 21:01:58.963906'
+date: '2020-02-07 21:32:38.200250'
 tree:
   00-hola_mundo-10/:
     _grade: 5.0
@@ -8,19 +8,19 @@ tree:
     tree:
       q01-10/: {_grade: 5.0, _score: 10, tree: 5.0}
   01-hadoop-50/:
-    _grade: 1.5
+    _grade: 4.5
     _score: 50
     tree:
       q01-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q02-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q03-10/: {_grade: 5.0, _score: 10, tree: 5.0}
-      q04-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q05-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q06-10/: {_grade: 0.0, _score: 10, tree: 0.0}
+      q04-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q05-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q06-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q07-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q08-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q09-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q10-10/: {_grade: 0.0, _score: 10, tree: 0.0}
+      q08-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q09-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q10-10/: {_grade: 5.0, _score: 10, tree: 5.0}
   02-pig-50/:
     _grade: 0.0
     _score: 50
@@ -72,4 +72,4 @@ tree:
       q10-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q11-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q12-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-2020-02-07 21:01:59.060482
+2020-02-07 21:32:38.296293
