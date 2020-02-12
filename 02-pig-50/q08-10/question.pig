@@ -11,6 +11,18 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.tsv
+fs -put data.tsv
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+u = LOAD 'data.tsv' AS (f1:CHARARRAY, f2:BAG{}, f3:MAP[]);
+v = FOREACH u GENERATE FLATTEN(f2) as sizef2,f3;
+v = FOREACH v GENERATE sizef2,FLATTEN(KEYSET(f3)) as sizef3;
+grupos = GROUP v BY (sizef2,sizef3);
+cuenta = FOREACH grupos GENERATE group, COUNT(v);
+dump cuenta;
+
+STORE cuenta INTO 'output';
+
+fs -copyToLocal output output
