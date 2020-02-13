@@ -1,6 +1,6 @@
-_grade: 1.97
+_grade: 2.48
 _score: 100
-date: '2020-02-11 22:06:34.669687'
+date: '2020-02-12 22:42:32.088608'
 tree:
   00-hola_mundo-10/:
     _grade: 5.0
@@ -22,7 +22,7 @@ tree:
       q09-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q10-10/: {_grade: 5.0, _score: 10, tree: 5.0}
   02-pig-50/:
-    _grade: 0.81
+    _grade: 2.42
     _score: 50
     tree:
       q01-10/: {_grade: 5.0, _score: 10, tree: 5.0}
@@ -30,16 +30,16 @@ tree:
       q03-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q04-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q05-10/: {_grade: 5.0, _score: 10, tree: 5.0}
-      q06-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q07-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q08-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q09-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q10-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q11-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q12-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q13-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q14-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-      q15-10/: {_grade: 0.0, _score: 10, tree: 0.0}
+      q06-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q07-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q08-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q09-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q10-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q11-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q12-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q13-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q14-10/: {_grade: 5.0, _score: 10, tree: 5.0}
+      q15-10/: {_grade: 5.0, _score: 10, tree: 5.0}
       q16-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q17-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q18-10/: {_grade: 0.0, _score: 10, tree: 0.0}
@@ -72,4 +72,4 @@ tree:
       q10-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q11-10/: {_grade: 0.0, _score: 10, tree: 0.0}
       q12-10/: {_grade: 0.0, _score: 10, tree: 0.0}
-2020-02-11 22:06:34.782942
+2020-02-12 22:42:32.387054

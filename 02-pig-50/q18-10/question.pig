@@ -16,6 +16,8 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.csv
+fs -put data.csv
 --
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
@@ -27,3 +29,8 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+n = FILTER u BY NOT((color MATCHES 'blue') OR (color MATCHES 'black'));
+o = FOREACH n GENERATE CONCAT((CHARARRAY)firstname,',',(CHARARRAY)color);
+dump o;
+STORE o INTO 'output';
+fs -copyToLocal output output

@@ -27,6 +27,8 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.csv
+fs -put data.csv
 --
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
@@ -38,3 +40,10 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+c = FOREACH u GENERATE surname as s1, UPPER(surname) as s2,LOWER(surname) as s3;
+c = ORDER c BY s1;
+c = FOREACH c GENERATE CONCAT((CHARARRAY)s1,',',(CHARARRAY)s2,',',(CHARARRAY)s3);
+dump c;
+STORE c INTO 'output';
+
+fs -copyToLocal output output
