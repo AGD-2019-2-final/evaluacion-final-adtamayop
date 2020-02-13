@@ -18,6 +18,8 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.csv
+fs -put data.csv
 --
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
@@ -29,4 +31,8 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+date_data = FOREACH u generate CONCAT((CHARARRAY)ToString(ToDate(birthday,'yyyy-MM-dd'),'yyyy'),',',(CHARARRAY)ToString(ToDate(birthday,'yyyy-MM-dd'),'yy'));
+dump date_data;
+STORE date_data INTO 'output';
+fs -copyToLocal output output
 

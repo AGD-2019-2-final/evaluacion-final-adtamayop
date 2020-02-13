@@ -9,6 +9,8 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.csv
+fs -put data.csv
 -- 
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
@@ -20,3 +22,9 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+x = FOREACH u GENERATE SUBSTRING(birthday,0,4) as year;
+y = GROUP x BY year;
+z = FOREACH y GENERATE CONCAT((CHARARRAY)group,',',(CHARARRAY)COUNT(x));
+dump z;
+STORE z INTO 'output';
+fs -copyToLocal output output

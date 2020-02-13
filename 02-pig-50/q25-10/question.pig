@@ -15,6 +15,8 @@
 -- Escriba el resultado a la carpeta `output` del directorio actual.
 -- 
 fs -rm -f -r output;
+fs -rm -f -r data.csv
+fs -put data.csv
 -- 
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
@@ -26,3 +28,14 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+q= FOREACH u GENERATE INDEXOF(firstname,'a',1) as index;
+--la respuesta del ejercicio debería de ser:
+-- q= FOREACH u GENERATE firstname,INDEXOF(firstname,'a',1) as index;
+--p = FOREACH q GENERATE 
+--(CASE 
+-- WHEN index == -1 THEN firstname
+-- WHEN index != -1 THEN SUBSTRING(firstname,0,(int)index)
+-- END);
+dump q;
+STORE q INTO 'output';
+fs -copyToLocal output output
