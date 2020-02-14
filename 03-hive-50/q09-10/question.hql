@@ -36,6 +36,11 @@ COLLECTION ITEMS TERMINATED BY ':'
 MAP KEYS TERMINATED BY '#'
 LINES TERMINATED BY '\n';
 LOAD DATA LOCAL INPATH 'tbl1.csv' INTO TABLE tbl1;
+
+INSERT OVERWRITE LOCAL DIRECTORY 'output'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+select t0.c1,t0.c2, t1.c4[t0.c2] from tbl0 t0 inner join tbl1 t1 on t0.c1 = t1.c1;
